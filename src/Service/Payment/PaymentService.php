@@ -2,7 +2,6 @@
 
 namespace App\Service\Payment;
 
-use App\Event\UserBannedEvent;
 use App\Event\UserPayedEvent;
 use App\Service\Payment\Interfaces\PaymentServiceInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
