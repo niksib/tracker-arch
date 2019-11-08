@@ -11,5 +11,14 @@
 2. POST `/auth/{userId}/ban` - Ban user by ID
 3. POST `/payment/{userId}/pay` - Pay for user account by ID
 
+## How add new tracker
+1. Create new Tracker, Tracker should implement Trackable interface
+2. Add new Tracker to `app.trackers` parameter in `app/config/services_{env}.yaml`
+3. Add new Tracker as a service in `app/config/services_{env}.yaml`
+
+## How add new User event
+1. Create new UserEvent, UserEvent should extends UserBaseEvent
+2. Add new UserEvent to UserEventSubscriber in `app/config/services.yaml`
+3. Dispatch event in your service
 
 All events writing to the log
