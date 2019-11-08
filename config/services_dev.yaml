@@ -1,0 +1,8 @@
+parameters:
+    app.trackers:
+        - { name: App\Service\Tracking\StubTracker }
+
+services:
+    App\Service\Tracking\StubTracker:
+        public: true
+        arguments: ['@logger']

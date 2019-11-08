@@ -1,0 +1,19 @@
+parameters:
+    app.trackers:
+        - { name: App\Service\Tracking\MySqlTracker }
+        - { name: App\Service\Tracking\RabbitTracker }
+        - { name: App\Service\Tracking\ApiTracker }
+
+services:
+    App\Service\Tracking\ApiTracker:
+        public: true
+        arguments: ['@logger']
+
+    App\Service\Tracking\MySqlTracker:
+        public: true
+        arguments: ['@logger']
+
+    App\Service\Tracking\RabbitTracker:
+        public: true
+        arguments: ['@logger']
+
