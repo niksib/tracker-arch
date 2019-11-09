@@ -8,7 +8,7 @@
 
 ## Available routes
 1. POST `/auth/register` - Register user
-2. PATCH `/auth/{userId}/ban` - Ban user by ID
+2. PATCH `/user/{userId}/ban` - Ban user by ID
 3. POST `/payment/{userId}/pay` - Pay for user account by ID
 
 ## How add new tracker

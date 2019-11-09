@@ -14,12 +14,4 @@ interface AuthServiceInterface
      * @throws \Exception
      */
     public function register(Request $request): User;
-
-    /**
-     * Ban user account
-     * @param int $userId
-     * @return bool
-     * @throws \Exception
-     */
-    public function ban(int $userId): bool;
 }

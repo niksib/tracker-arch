@@ -31,26 +31,4 @@ class AuthController extends AbstractController
             ]);
         }
     }
-
-    /**
-     * Ban user account
-     * @Route("/auth/{userId}/ban", name="user_ban", methods={"PATCH"}, requirements={"id"="\d+"})
-     * @param int $userId
-     * @param AuthServiceInterface $authService
-     * @return JsonResponse
-     */
-    public function ban(int $userId, AuthServiceInterface $authService): JsonResponse
-    {
-        try {
-            $authService->ban($userId);
-
-            return $this->json([
-                'message' => 'User successful banned'
-            ]);
-        } catch (\Exception $exception) {
-            return $this->json([
-                'message' => $exception->getMessage()
-            ]);
-        }
-    }
 }
